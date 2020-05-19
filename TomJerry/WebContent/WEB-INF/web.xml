@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+	version="3.1" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<!-- 로그인 요청처리 서블릿 -->
+	<servlet>
+		<servlet-name>1st_login</servlet-name>
+		<servlet-class>day04.Login</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>1st_login</servlet-name>
+		<url-pattern>/pre/Login.cls2</url-pattern>
+	</servlet-mapping>
+	<!-- 로그인 처리요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>1st_loginProc</servlet-name>
+		<servlet-class>day04.LoginProc</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>1st_loginProc</servlet-name>
+		<url-pattern>/pre/LoginProc.cls2</url-pattern>
+	</servlet-mapping>
+	<!--  회원가입폼 요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>1st_Join</servlet-name>
+		<servlet-class>day04.Join</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>1st_Join</servlet-name>
+		<url-pattern>/pre/Join.cls2</url-pattern>
+	</servlet-mapping>
+	<!--  ID중복체크 요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>1st_idCheck</servlet-name>
+		<servlet-class>day04.IdCheck</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>1st_idCheck</servlet-name>
+		<url-pattern>/id.Check</url-pattern>
+	</servlet-mapping>
+
+	<!--  회원아이디 인풋 폼 요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>1st_idInput</servlet-name>
+		<servlet-class>day05.InputForm</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>1st_idInput</servlet-name>
+		<url-pattern>/pre/InputForm.cls2</url-pattern>
+	</servlet-mapping>
+
+	<!--  회원정보 폼 요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>1st_getInfo</servlet-name>
+		<servlet-class>day05.MembInfo</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>1st_getInfo</servlet-name>
+		<url-pattern>/pre/MembInfo.cls2</url-pattern>
+	</servlet-mapping>
+
+	<!--  JSTL Test01 요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>jstlTest01</servlet-name>
+		<servlet-class>day06.Jstl_Test01</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jstlTest01</servlet-name>
+		<url-pattern>/pre/JSTL_Test01.cls2</url-pattern>
+	</servlet-mapping>
+
+	<!--  JSTL dan 요청 처리 서블릿 매핑 -->
+	<servlet>
+		<servlet-name>jtest2</servlet-name>
+		<servlet-class>day06.JTest02</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jtest2</servlet-name>
+		<url-pattern>/pre/jtest02.cls2</url-pattern>
+	</servlet-mapping>
+	
+	<!-- jstl_test03 요청 처리 서블릿 매핑 -->
+	<servlet>
+        <servlet-name>jtest3</servlet-name>
+        <servlet-class>day06.JTest03</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>jtest3</servlet-name>
+    	<url-pattern>/pre/jtest03.cls2</url-pattern>
+    </servlet-mapping>
+	
+	<!-- jstl_test04 요청 처리 서블릿 매핑 -->
+	<servlet>
+        <servlet-name>jtest4</servlet-name>
+        <servlet-class>day06.JTest04</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>jtest4</servlet-name>
+    	<url-pattern>/pre/jtest04.cls2</url-pattern>
+    </servlet-mapping>
+</web-app>
