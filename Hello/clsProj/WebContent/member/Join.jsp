@@ -68,15 +68,15 @@
 			var sid = $('#id').val();
 			if(sid){
 				$.ajax({
-					url: '../id.check',
+					url: '/clsProj/member/id.ck',
 					type: 'post',
 					dataType: 'json',
 					data: {
 						'id': sid
 					},
 					success: function(data){
-						var result = data.result;
-						if(result == 'ok'){
+						var result = data.cnt;
+						if(result == 0){
 							// 아이디를 사용가능한 경우
 							$('#idmsg').text('*** 사용 가능한 아이디 입니다. ***');
 							$('#idmsg').css('color', 'blue');
@@ -100,6 +100,12 @@
 				return;
 			}
 		});
+		
+		$('#jbtn').click(function(){
+			// 무결성검사
+			
+			$('#frm').submit;
+		});
 	});
 </script>
 </head>
@@ -108,7 +114,7 @@
 		<p></p>
 	</div>
 	<div class="w3-col l6 m6 s12">
-		<form class="w3-col" method="post" action="" name="frm" id="frm">
+		<form class="w3-col" method="post" action="/clsProj/member/joinProc.cls" name="frm" id="frm" encType="multipart/form-data">
 			<div class="w3-col w3-center w3-blue w3-margin-top">
 				<h2>Increpas Join</h2>
 			</div>

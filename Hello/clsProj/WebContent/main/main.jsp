@@ -13,14 +13,6 @@
 </style>
 <script type="text/javascript">
 	$(function(){
-		/*
-		$('#login').click(function(){
-			$(location).attr('href', '/clsProj/member/login.cls');
-		});
-		$('#logout').click(function(){
-			$(location).attr('href', '/clsProj/member/logoutProc.cls');
-		});
-		*/
 		$('.btn').click(function(){
 			var tid = $(this).attr('id');
 			var url = ' ';
@@ -29,10 +21,21 @@
 			} else if(tid == 'logout') {
 				url = '/clsProj/member/logoutProc.cls';
 			} else if(tid == 'join') {
-				url = '/clsProj/member/joinForm.cls';
+				url = '/clsProj/member/Join.cls';
 			} else if(tid == 'gBoard') {
 				url = '/clsProj/gBoard/gBoardList.cls';
+			} else if(tid == 'reBoard') {
+				url = '/clsProj/reBoard/reBoard.cls';
+			} else if(tid == 'list') {
+				url = '/clsProj/member/memberList.cls';
+			} else if(tid == 'survey') {
+				url = '/clsProj/survey/survey.cls';
+			} else if(tid == 'surveyAdd') {
+				url = '/clsProj/survey/surveyAdd.cls';
+			} else if(tid == 'board') {
+				url = '/clsProj/board/board.cls';
 			}
+
 			
 			$(location).attr('href', url);
 		});
@@ -50,6 +53,11 @@
 			<c:if test="${not empty SID}">
 			<div class="btn w3-button w3-red inblock w-150" id="logout">Logout</div>
 			<div class="btn w3-button w3-red inblock w-150" id="gBoard">gBoard</div>
+			<div class="btn w3-button w3-red inblock w-150" id="reBoard">reBoard</div>
+			<div class="btn w3-button w3-red inblock w-150" id="survey">Survey</div>
+			<div class="btn w3-button w3-red inblock w-150" id="surveyAdd">SurveyAdd</div>
+			<div class="btn w3-button w3-red inblock w-150" id="board">board</div>
+			<div class="btn w3-button w3-red inblock w-150" id="list">MemberList</div>
 			</c:if>
 		</div>
 	</div>

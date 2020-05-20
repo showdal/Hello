@@ -3,7 +3,7 @@ package com.increpas.www.dispatch;
 /**
  * 이 클래스는 확장자가 cls로 요청이 되는 경우 Dispatch시킬 서블릿 클래스이다.
  * 
- * @author	전은석
+ * @author	김수진
  * @since	2020.05.11
  * @see
  * 			com.increpas.www.controller.ClsController
@@ -89,10 +89,10 @@ public class Dispatch extends HttpServlet {
 		String domain = req.getContextPath();
 		// 3. 실제 요청내용을 알아낸다.
 		String realPath = full.substring(domain.length());
-//		System.out.println("######### realPath : " + realPath);
 		
 		// 4. 요청내용을 알아냈으니 실제 실행할 클래스를 가져온다.
 		ClsController cls = map.get(realPath);
+		System.out.println("######### realPath : " + realPath);
 		req.setAttribute("isRedirect", false);
 		String view = cls.exec(req, resp);
 		boolean bool = (boolean) req.getAttribute("isRedirect");

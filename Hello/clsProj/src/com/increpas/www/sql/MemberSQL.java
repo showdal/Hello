@@ -2,6 +2,10 @@ package com.increpas.www.sql;
 
 public class MemberSQL {
 	public final int SEL_LOGIN_CNT = 1001;
+	public final int ID_CNT = 1002;
+
+	public final int ADD_MEMB = 3001;
+	public final int ADD_PROF = 8001;
 	
 	public String getSQL(int code) {
 		StringBuffer buff = new StringBuffer();
@@ -15,6 +19,32 @@ public class MemberSQL {
 			buff.append("	id = ? ");
 			buff.append("	AND pw = ? ");
 			break;
+		case ID_CNT:
+			buff.append("SELECT ");
+			buff.append("	COUNT(*) cnt ");
+			buff.append("FROM ");
+			buff.append("	member ");
+			buff.append("WHERE ");
+			buff.append("	id = ? ");
+			break;
+		case ADD_MEMB:
+			buff.append("INSERT INTO "); 
+			buff.append("    memmber(mno, name, id, pw, mail, gen, tel, ano) "); 
+			buff.append("VALUES( "); 
+			buff.append("    (SELECT NVL(MAX(mno) + 1, 1000)FROM member WHERE mno < 9998), "); 
+			buff.append("    ?,?,?,?,?,?,? "); 
+			buff.append(")" );
+			break;
+		case ADD_PROF:
+			buff.append("INSERT INTO ");
+			buff.append("    profile(pno, p_mno, oriname, savename, len)  ");
+			buff.append("VALUES( ");
+			buff.append("    (SELECT NVL(MAX(pno)+1,1000) FROM profile), "); 
+			buff.append("    (SELECE mno FROM member WHERE id = ? ), ");
+			buff.append("    ?, ?, ? ");
+			buff.append(")" );
+			break;
+		
 		}
 		return buff.toString();
 	}

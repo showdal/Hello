@@ -3,8 +3,8 @@ package com.increpas.www.controller.gBoard;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.increpas.www.controller.ClsController;
-import com.increpas.www.dao.GBoardDAO;
+import com.increpas.www.controller.*;
+import com.increpas.www.dao.*;
 
 public class GBoardProc implements ClsController {
 

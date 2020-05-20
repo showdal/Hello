@@ -1,13 +1,15 @@
-package com.increpas.www.controller;
+package com.increpas.www.controller.survey;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MainController implements ClsController {
+import com.increpas.www.controller.ClsController;
+
+public class SurveyAddForm implements ClsController {
 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
-		String view = "/main/main.jsp";
+		String view = "/survey/surveyAdd.jsp";
 		return view;
 	}
 

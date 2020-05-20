@@ -36,7 +36,7 @@
          <div class="w3-col w3-padding w3-card">
             <div class="w3-col  w3-margin-top">
                <label for="id" class="w3-col m2" style="display: inline-block; padding-top: 3px;"><h5><b>아이디 : </b></h5></label>
-               <h6 class="w3-col m8 w3-text-grey" style="margin:0px; padding-bottom: 20px;" id="id"><b>${SID}</b></h6>
+               <h6 class="w3-col m8 w3-text-grey" style="margin:0px; padding-top:15px;" id="id"><b>${SID}</b></h6>
             </div>
             <form class="w3-col w3-margin-bottom" method="post" action="/gBoard/gBoardProc.cls" id="frm">
             	<input type="hidden" id="sid" name="id" value="${SID}">

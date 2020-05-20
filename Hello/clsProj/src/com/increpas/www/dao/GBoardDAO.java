@@ -2,7 +2,7 @@ package com.increpas.www.dao;
 
 /**
  * 이 클래스는 방명록게시판에 관련된 데이터베이스 작업을 처리할 클래스
- * @author	전은석
+ * @author	김수진
  * @since	2020.05.12
  * @version	v.1.0
  */

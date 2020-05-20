@@ -2,11 +2,13 @@ package com.increpas.www.vo;
 
 import java.sql.*;
 import java.text.*;
+
 public class GBoardVO {
 	private int gno, gmno;
 	private String id, body, sDate, avatar;
 	private Date gDate;
 	private Time gTime;
+	
 	public int getGno() {
 		return gno;
 	}
@@ -34,14 +36,14 @@ public class GBoardVO {
 	public String getsDate() {
 		return sDate;
 	}
+	public void setsDate(String sDate) {
+		this.sDate = sDate;
+	}
 	public void setsDate() {
 		SimpleDateFormat form1 = new SimpleDateFormat("yyyy년 MM월 dd일");
 		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm:ss");
 		String str = form1.format(gDate) + " " + form2.format(gTime);
 		this.sDate = str;
-	}
-	public void setsDate(String sDate) {
-		this.sDate = sDate;
 	}
 	public String getAvatar() {
 		return avatar;
@@ -61,4 +63,6 @@ public class GBoardVO {
 	public void setgTime(Time gTime) {
 		this.gTime = gTime;
 	}
+	
+	
 }
